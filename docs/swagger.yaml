@@ -1,0 +1,51 @@
+openapi: 3.0.3
+info:
+  title: HealthCheck API
+  version: 1.0.0
+  description: API REST de monitoring serveur avec alertes automatiques
+
+servers:
+  - url: http://localhost:8000
+
+paths:
+  /api/v1/health:
+    get:
+      summary: État général du serveur
+      responses:
+        "200":
+          description: OK
+
+  /api/v1/cpu:
+    get:
+      summary: Utilisation CPU
+      responses:
+        "200":
+          description: OK
+
+  /api/v1/memory:
+    get:
+      summary: Utilisation mémoire
+      responses:
+        "200":
+          description: OK
+
+  /api/v1/disk:
+    get:
+      summary: Utilisation disque
+      responses:
+        "200":
+          description: OK
+
+  /api/v1/all:
+    get:
+      summary: Toutes les métriques
+      responses:
+        "200":
+          description: OK
+
+  /api/v1/incidents:
+    get:
+      summary: Liste des incidents
+      responses:
+        "200":
+          description: OK
